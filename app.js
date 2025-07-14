@@ -4,6 +4,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const pokemonRouter = require('./api/pokemonRouter');
 const generationRouter = require('./api/generationRouter');
+const typeRouter = require('./api/typeRouter');
+const fakeRouter = require('./api/fakeRouter');
 
 const app = express();
 
@@ -13,6 +15,8 @@ app.use(bodyParser.json());
 
 app.use('/pokemon', pokemonRouter);
 app.use('/generation', generationRouter);
+app.use('/type', typeRouter);
+app.use('/fake', fakeRouter);
 
 const port = 3000;
 
